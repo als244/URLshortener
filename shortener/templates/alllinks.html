@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>All Links</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+	{% block content %}
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		<a class="navbar-brand" href="/">My URL Shortener</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    	<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    		<div class="navbar-nav">
+    			<a class="nav-item nav-link active" href="/shorten/">Shorten</a>
+      			<a class="nav-item nav-link active" href="/recent/">100 Most Recently Created Links</a>
+      			<a class="nav-item nav-link active" href="/top/">Top 10 in Month</a>
+      			<a class="nav-item nav-link active" href="/count/">Count</a>
+      			<a class="nav-item nav-link disabled" href="/all-links/">All Links</a>
+    		</div>
+  		</div>
+	</nav>
+
+	<p></p>
+	<h1 class="text-center"> All Links </h1>
+	<p></p>
+	<table class="table">
+		<thead class="thead-light">
+			<tr>
+				<th scope="col"> Long URL </th>
+				<th scope="col"> Short URL </th>
+				<th scope="col"> Total Count </th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for link in links %}
+				<tr>
+					<td>{{link.url}}</td>
+					<td>{{link.shortened}}</td>
+					<td>{{link.count}}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	{% endblock %}
+</body>
+</html>

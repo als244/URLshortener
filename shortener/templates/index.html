@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home Page :)</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		<a class="navbar-brand" href="/">My URL Shortener</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    	<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    		<div class="navbar-nav">
+    			<a class="nav-item nav-link active" href="/shorten/">Shorten</a>
+      			<a class="nav-item nav-link active" href="/recent/">100 Most Recently Created Links</a>
+      			<a class="nav-item nav-link active" href="/top/">Top 10 in Month</a>
+      			<a class="nav-item nav-link active" href="/count/">Count</a>
+      			<a class="nav-item nav-link active" href="/all-links/">All Links</a>
+    		</div>
+  		</div>
+	</nav>
+
+	<p></p>
+	<p></p>
+	<div class="container">
+		<div class="jumbotron">
+			<h1> Welcome to a simple URL Shortener!</h1>
+				<p> The purpose of this app is to easily access your favorite sites on the web! The navigation bar should be helpful to execute whatever you command but you intend. However if you want to strictly use URL paths to navigate the site, it has the following functionality:</p>
+				<ul>
+					<li>To create a short link from a website use "/shorten/&lt;longURL&gt;", this will show you the short code to type in for the future</li>
+					<li>To use that short code for easy access use "/&lt;shortURL&gt;"</li>
+					<li>To see the 100 most recently created links between short and long URL's use "/recent/"</li>
+					<li>To see the top 10 most visited short URLs use "/top/"</li>
+					<li>To see the amont of times a cetain short URL has been used use "/count/&lt;shortURL&gt;"</li>
+				</ul>
+				<p> NOTE: The website is sensitive to backslashes ('/'), so follow the pattern described above for your intended use.</p>
+			</div>
+	</div>
+	<div class="container">
+		<div class="jumbotron">
+			<h3> To use a shortened URL as a redirection to the associated longer URL, in the URL in this browser after the site name, enter a "/" followed by the shortened URL you want to visit! </h3>
+
+			<p>Beware you are leaving the website...</p>
+		</div>
+	</div>
+</body>
+</html>
